@@ -1,0 +1,27 @@
+Branding Website
+
+-----------------------------------
+HTML priorities -
+several sections:
+header -> logo and menu button
+sections -> content with gradients
+
+--------------------------
+CSS priorities -  Inheritance
+primarycolor,secondcolor,accentcolor
+fontcolor -  default
+bg-colors - primary,secondary
+logo-colors - varients
+fontfamily - 4 varients
+ ** Variables must be Used to achieve.
+
+
+--------------------------
+CSS animations -
+different moves.
+
+
+--------------------------------
+Responsive-design
+Desktop-first Approach.
+Set Breakpoints where Design Breaks.
