@@ -1,0 +1,202 @@
+/* animation files is imported into stlyes.css file */
+
+/* Type 1 */
+.animate--comefromleft {
+  /* <name> <duration> <timing-function> <delay> <iteration-count> <direction fill-mode>;  */
+  animation: comefromleft 1.2s 0.1s ease-out;
+}
+.animate--comefromright {
+  animation: comefromright 1.2s 0.1s ease-out;
+}
+.animate--comefromtop {
+  animation: comefromtop 1.2s 0.1s ease-out;
+}
+.animate--comefrombottom {
+  animation: comefrombottom 1.2s 0.1s ease-out;
+}
+@keyframes comefromleft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0; /*not visible*/
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1; /*visible*/
+  }
+}
+@keyframes comefromright {
+  0% {
+    transform: translateX(50%);
+    opacity: 0; /*not visible*/
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1; /*visible*/
+  }
+}
+@keyframes comefromtop {
+  0% {
+    transform: translateY(50%);
+    opacity: 0; /*not visible*/
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1; /*visible*/
+  }
+}
+@keyframes comefrombottom {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0; /*not visible*/
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1; /*visible*/
+  }
+}
+
+/* Type 2 */
+.animate--navitem_L {
+  animation: navitem--left 1.4s 0.3s ease-out;
+}
+@keyframes navitem--left {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0; /*not visible*/
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; /*visible*/
+  }
+}
+
+/* Type 3 */
+/* Scroll animations */
+@keyframes appearElementFromLeft {
+  from {
+    opacity: 0; /*invisible*/
+    transform: translateX(-100%); /*position to leftside 100%*/
+    /* clip-path: inset(100% 100% 0 0); */
+  }
+  to {
+    opacity: 1; /*visible*/
+    transform: translateX(0); /*position back to normal */
+    /* clip-path: inset(0 0 0 0); */
+  }
+}
+
+@keyframes appearElementFromRight {
+  from {
+    opacity: 0; /*invisible*/
+    transform: translateX(100%); /*position to rightside 100%*/
+  }
+  to {
+    opacity: 1; /*visible*/
+    transform: translateX(0); /*position back to normal */
+  }
+}
+
+@keyframes appearElementFromTop {
+  from {
+    opacity: 0; /*invisible*/
+    transform: translateY(-100%); /*position to topside 100%*/
+  }
+  to {
+    opacity: 1; /*visible*/
+    transform: translateY(0); /*position back to normal */
+  }
+}
+
+@keyframes appearElementFromBottom {
+  from {
+    opacity: 0; /*invisible*/
+    transform: translateY(100%); /*position to bottomside 100%*/
+  }
+  to {
+    opacity: 1; /*visible*/
+    transform: translateY(0); /*position back to normal */
+  }
+}
+
+.s-2 .img-container {
+  animation: appearElementFromLeft linear; /*name timefunction*/
+  animation-timeline: view();
+  /* 'VIEW()' means Animation happens when that ParticularElement visibles on Screen*/
+  animation-range: entry 0% cover 60%;
+  /* 'ENTRY' makes Animation happens when Element starts to enter the ViewPort
+      0% means startPoint. Animation starts only when 0% of that Element visible on Screen.
+      30% means endPoint. Animation doesn't completes untill 30% of element visible on Screen. bythe time, it reaches 30% full animation is completed.
+  */
+}
+.s-2 .content-container {
+  animation: appearElementFromLeft linear; /*name timefunction*/
+  animation-timeline: view();
+  /* 'VIEW()' means Animation happens when that ParticularElement visibles on Screen*/
+  animation-range: entry 0% cover 30%;
+  /* 'ENTRY' makes Animation happens when Element starts to enter the ViewPort
+      0% means startPoint. Animation starts only when 0% of that Element visible on Screen.
+      30% means endPoint. Animation doesn't completes untill 30% of element visible on Screen. bythe time, it reaches 30% full animation is completed.
+  */
+  overflow-x: hidden;
+}
+
+.s-3__imgbox {
+  animation: appearElementFromBottom linear; /*name timefunction*/
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  overflow-x: hidden;
+}
+.s-3__titlebox,
+.s-3__theorybox {
+  animation: appearElementFromRight linear; /*name timefunction*/
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  overflow-x: hidden;
+}
+.s-4__imgbox {
+  animation: appearElementFromLeft linear; /*name timefunction*/
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  overflow-x: hidden;
+}
+.s-4__content-container {
+  animation: appearElementFromBottom linear; /*name timefunction*/
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  overflow-x: hidden;
+}
+
+.s-5 .top-container .leftpart,
+.s-5 .top-container .rightpart,
+.s-5 .bottom-container .card {
+  animation: appearElementFromLeft linear; /*name timefunction*/
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  overflow-x: hidden;
+}
+
+.s-6 .leftpart,
+.s-6 .rightpart {
+  animation: appearElementFromBottom linear; /*name timefunction*/
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+  overflow-x: hidden;
+}
