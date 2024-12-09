@@ -184,8 +184,8 @@
   overflow-x: hidden;
 }
 
-.s-5 .top-container .leftpart,
-.s-5 .top-container .rightpart,
+.s-5 .top-container .container1,
+.s-5 .top-container .container2,
 .s-5 .bottom-container .card {
   animation: appearElementFromLeft linear; /*name timefunction*/
   animation-timeline: view();
@@ -193,8 +193,8 @@
   overflow-x: hidden;
 }
 
-.s-6 .leftpart,
-.s-6 .rightpart {
+.s-6 .container1,
+.s-6 .container2 {
   animation: appearElementFromBottom linear; /*name timefunction*/
   animation-timeline: view();
   animation-range: entry 0% cover 20%;
